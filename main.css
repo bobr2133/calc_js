@@ -1,0 +1,21 @@
+button{
+    font-size:100px;
+}
+#calcScreen {
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+    text-align: end;
+    font-family: fantasy;
+    font-size: 40px;
+    padding-right: 10px;
+}
+.buttonContainer{
+    display: grid;
+    grid-template-columns: 90px 90px 90px;
+    gap: 5px;
+}

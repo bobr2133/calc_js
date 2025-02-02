@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css"/>
+    </head>
+    <body>
+        <div>
+            <div id="calcScreen"></div>
+            <div class="buttonContainer">       
+                <button onclick="button_click(event)">1</button>
+                <button onclick="button_click(event)">2</button>
+                <button onclick="button_click(event)">3</button>
+            
+                <button onclick="button_click(event)">4</button>
+                <button onclick="button_click(event)">5</button>
+                <button onclick="button_click(event)">6</button>
+        
+                <button onclick="button_click(event)">7</button>
+                <button onclick="button_click(event)">8</button>
+                <button onclick="button_click(event)">9</button>
+                <button onclick="button_plus()">+</button>
+                <button onclick="button_equals()">=</button>
+            </div>
+        </div>
+     </body>
+<script>
+    function button_equals(){
+        const screen = document.getElementById("calcScreen")
+        screen.innerText = eval(screen.innerText)
+    }   
+    function button_plus(){
+        const screen = document.getElementById('calcScreen')
+        let screenText = screen.innerText
+        if ('0123456789'.includes(screenText[screenText.length - 1])){
+            screen.innerText += "+"
+        }
+    }
+    function button_click(event){
+        
+        const screen = document.getElementById("calcScreen")
+        if (screen.innerText.length < 12){
+            screen.innerText += event.target.innerText }
+    }
+</script>
+</html>
